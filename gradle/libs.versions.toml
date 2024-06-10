@@ -30,6 +30,7 @@ roomKtx = "2.5.2"
 shimmer = "0.5.0"
 playServicesMaps = "18.2.0"
 googleKsp = "1.9.21-1.0.15"
+activityVersion = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -67,6 +68,7 @@ navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-
 retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activityVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
