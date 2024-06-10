@@ -3,17 +3,19 @@ package com.example.stunzilla.ui.auth.login
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
+import android.view.MotionEvent
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.ContextCompat
 import com.example.stunzilla.R
 import com.example.stunzilla.databinding.ActivityLoginBinding
-import com.example.stunzilla.databinding.ActivityMainBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private var isPasswordVisible = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,8 +24,24 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        binding.emailEditText.addTextChangedListener(textWatcher)
-        binding.passwordEditText.addTextChangedListener(textWatcher)
+        setupEditText()
+    }
+
+    private fun setupEditText() {
+        binding.apply {
+            emailEditText.addTextChangedListener(textWatcher)
+            passwordEditText.addTextChangedListener(textWatcher)
+
+            passwordEditText.setOnTouchListener { v, event ->
+                if (event.action == MotionEvent.ACTION_UP) {
+                    if (event.rawX >= (passwordEditText.right - passwordEditText.compoundDrawables[2].bounds.width())) {
+                        togglePasswordVisibility(passwordEditText)
+                        return@setOnTouchListener true
+                    }
+                }
+                false
+            }
+        }
     }
 
     private val textWatcher = object : TextWatcher {
@@ -45,5 +63,30 @@ class LoginActivity : AppCompatActivity() {
         }
 
         override fun afterTextChanged(s: Editable?) {}
+    }
+
+    private fun togglePasswordVisibility(passwordEditText: AppCompatEditText) {
+        val selectionEnd = passwordEditText.selectionEnd
+        if (isPasswordVisible) {
+            passwordEditText.transformationMethod = PasswordTransformationMethod.getInstance()
+            passwordEditText.setCompoundDrawablesWithIntrinsicBounds(
+                ContextCompat.getDrawable(this, R.drawable.ic_lock),
+                null,
+                ContextCompat.getDrawable(this, R.drawable.ic_visibility),
+                null
+            )
+        } else {
+            passwordEditText.transformationMethod = HideReturnsTransformationMethod.getInstance()
+            passwordEditText.setCompoundDrawablesWithIntrinsicBounds(
+                ContextCompat.getDrawable(this, R.drawable.ic_lock),
+                null,
+                ContextCompat.getDrawable(this, R.drawable.ic_visibility_off),
+                null
+            )
+        }
+        isPasswordVisible = !isPasswordVisible
+        passwordEditText.clearFocus()
+        passwordEditText.requestFocus()
+        passwordEditText.setSelection(selectionEnd)
     }
 }
