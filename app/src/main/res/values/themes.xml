@@ -13,4 +13,22 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="TextBold">
+        <item name="fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="TextRegular">
+        <item name="fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="Button" parent="TextMedium">
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>
+

@@ -1,11 +1,72 @@
 <resources>
     <string name="app_name">StunZilla</string>
-    <string name="title_home">Home</string>
+
+    <!--Bottom Navigation-->
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_activity">Activity</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="title_profile">Profile</string>
+
+    <!--Splash Screen-->
+    <string name="app_icon_content_description">App Icon</string>
+    <string name="next">Lanjut</string>
+    <string name="furthermore">Selanjutnya</string>
+    <string name="skip">Lewati</string>
+
+    <string name="first_boarding_headline">Pantau Tumbuh Kembang Anak dengan Mudah dan Cepat</string>
+    <string name="first_boarding_description">Dapatkan informasi lengkap tentang status gizi anak,\n ikuti perkembangannya dengan grafik pertumbuhan,\n dan akses tips pencegahan stunting</string>
+
+    <string name="second_boarding_headline">Lawan Stunting dengan Solusi Tepat</string>
+    <string name="second_boarding_description">StunZilla membantu Anda memantau tumbuh \n kembang anak secara berkala, serta memberikan \n rekomendasi intervensi yang tepat\n untuk kesehatan anak.</string>
+
+    <string name="third_boarding_headline">Masa Depan Generasi Bebas Stunting Dimulai dari Pemantauan</string>
+    <string name="third_boarding_description">Bergabunglah dengan komunitas StunZilla untuk saling mendukung dalam memerangi stunting dan ciptakan generasi penerus yang lebih sehat dan kuat.</string>
+
+
+    <!--Login-->
     <string name="login_title">Cegah Stunting,\nCiptakan Generasi \nSehat!</string>
     <string name="login_with_google">Masuk dengan Google</string>
     <string name="btn_register">Daftar dulu yuk</string>
     <string name="tv_have_account">"Belum punya akun?</string>
     <string name="tv_or">atau</string>
+
+    <!--Register-->
+    <string name="create_account">Buat akunmu</string>
+    <string name="nickname">Nama Panggilan</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="usia_anak">Usia Anak</string>
+    <string name="verifikasi_email">Masukkan 6 Digit Kode Verifikasi</string>
+    <string name="create_password">Buat password</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Konfirmasi password</string>
+
+    <!--Hint-->
+    <string name="hint_input_nickname">nama panggilan</string>
+    <string name="hint_input_full_name">nama lengkap</string>
+    <string name="hint_input_email">email</string>
+    <string name="hint_input_usia_anak">hh/bb/tt</string>
+    <string name="hint_password">password</string>
+    <string name="hint_input_password">Masukkan password</string>
+    <string name="hint_input_confirm_password">Masukkan konfirmasi password</string>
+
+    <!--Setting-->
+    <string name="bahasa_english">Bahasa Inggris</string>
+    <string name="bahasa_indonesia">Bahasa Indonesia</string>
+
+
+    <!--Error Handling-->
+    <string name="error_email">Email harus menggunakan format yang valid (@)</string>
+    <string name="error_password">Password harus terdiri dari 8+ character, huruf kecil, huruf besar, numerik</string>
+    <string name="error_nickname">Nama panggilan tidak boleh kosong</string>
+    <string name="error_full_name">Nama lengkap tidak boleh kosong</string>
+    <string name="error_usia_anak">Usia anak tidak boleh kosong</string>
+
+
+    <!--Content Description-->
+    <string name="onboarding_illustration">Onboarding Illustration</string>
+    <string name="boarding_indicators">Boarding indicators</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
