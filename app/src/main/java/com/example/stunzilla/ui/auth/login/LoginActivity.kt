@@ -54,11 +54,11 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() || password.isNotEmpty()) {
                 binding.googleButton.visibility = View.GONE
                 binding.buttonContainer.visibility = View.VISIBLE
-                binding.tvOr.text = ""
+                binding.tvOr.visibility = View.INVISIBLE
             } else {
                 binding.googleButton.visibility = View.VISIBLE
                 binding.buttonContainer.visibility = View.GONE
-                binding.tvOr.text = "atau"
+                binding.tvOr.visibility = View.VISIBLE
             }
         }
 

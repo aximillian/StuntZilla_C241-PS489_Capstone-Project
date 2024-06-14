@@ -22,7 +22,6 @@
     <string name="third_boarding_headline">Masa Depan Generasi Bebas Stunting Dimulai dari Pemantauan</string>
     <string name="third_boarding_description">Bergabunglah dengan komunitas StunZilla untuk saling mendukung dalam memerangi stunting dan ciptakan generasi penerus yang lebih sehat dan kuat.</string>
 
-
     <!--Login-->
     <string name="login_title">Cegah Stunting,\nCiptakan Generasi \nSehat!</string>
     <string name="login_with_google">Masuk dengan Google</string>
@@ -45,6 +44,7 @@
     <string name="hint_input_nickname">nama panggilan</string>
     <string name="hint_input_full_name">nama lengkap</string>
     <string name="hint_input_email">email</string>
+    <string name="hint_input_email_login">email or username</string>
     <string name="hint_input_usia_anak">hh/bb/tt</string>
     <string name="hint_password">password</string>
     <string name="hint_input_password">Masukkan password</string>
@@ -54,14 +54,12 @@
     <string name="bahasa_english">Bahasa Inggris</string>
     <string name="bahasa_indonesia">Bahasa Indonesia</string>
 
-
     <!--Error Handling-->
     <string name="error_email">Email harus menggunakan format yang valid (@)</string>
     <string name="error_password">Password harus terdiri dari 8+ character, huruf kecil, huruf besar, numerik</string>
     <string name="error_nickname">Nama panggilan tidak boleh kosong</string>
     <string name="error_full_name">Nama lengkap tidak boleh kosong</string>
     <string name="error_usia_anak">Usia anak tidak boleh kosong</string>
-
 
     <!--Content Description-->
     <string name="onboarding_illustration">Onboarding Illustration</string>
