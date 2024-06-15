@@ -9,6 +9,7 @@ class PreferenceManager(context: Context) {
     private val editor = prefs.edit()
 
     val getToken = prefs.getString(ConstVal.KEY_TOKEN, "")
+    val getOnBoardingScreen = prefs.getBoolean(ConstVal.KEY_ONBOARDING_SCREEN, false)
 
     fun setOnboardingScreenPreference() {
         editor.putBoolean(ConstVal.KEY_ONBOARDING_SCREEN, true)

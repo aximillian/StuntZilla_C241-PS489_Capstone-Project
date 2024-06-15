@@ -41,7 +41,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
             delay(ConstVal.SPLASH_SCREEN_DURATION.seconds)
             if (preferenceManager.getToken != "") {
                 findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
-            } else if (preferenceManager.getOnboardingScreen) {
+            } else if (preferenceManager.getOnBoardingScreen) {
                 findNavController().navigate(R.id.action_splashFragment_to_loginActivity)
             } else {
                 findNavController().navigate(R.id.action_splashFragment_to_boardingFragment)

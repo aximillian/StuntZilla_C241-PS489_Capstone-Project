@@ -39,7 +39,7 @@
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="10dp"
             android:background="@drawable/edit_text_background"
             android:drawableStart="@drawable/ic_user"
             android:drawablePadding="16dp"
@@ -54,7 +54,8 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_background"
             android:drawableStart="@drawable/ic_lock"
             android:drawableEnd="@drawable/ic_visibility"
@@ -84,7 +85,7 @@
         android:id="@+id/btn_google"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/google_button_background"
         android:drawableStart="@drawable/ic_google"
         android:drawablePadding="50dp"
@@ -103,7 +104,7 @@
         android:id="@+id/button_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:orientation="horizontal"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,7 +112,7 @@
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/forgotPasswordButton"
+            android:id="@+id/btn_forgot_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -125,11 +126,11 @@
             android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/loginButton"
+            android:id="@+id/btn_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_background_2"
+            android:background="@drawable/button_background_black"
             android:fontFamily="@font/inter_semibold"
             android:padding="16dp"
             android:text="Masuk"

@@ -30,5 +30,10 @@
     <style name="Button" parent="TextMedium">
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="ButtomNavText" parent="TextAppearance.AppCompat.Caption">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
 </resources>
 

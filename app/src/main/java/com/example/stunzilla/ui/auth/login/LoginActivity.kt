@@ -1,5 +1,6 @@
 package com.example.stunzilla.ui.auth.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.example.stunzilla.R
 import com.example.stunzilla.databinding.ActivityLoginBinding
+import com.example.stunzilla.ui.auth.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -25,6 +27,10 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         setupEditText()
+
+        binding.btnRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 
     private fun setupEditText() {
@@ -52,11 +58,11 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.passwordEditText.text.toString().trim()
 
             if (email.isNotEmpty() || password.isNotEmpty()) {
-                binding.googleButton.visibility = View.GONE
+                binding.btnGoogle.visibility = View.GONE
                 binding.buttonContainer.visibility = View.VISIBLE
                 binding.tvOr.visibility = View.INVISIBLE
             } else {
-                binding.googleButton.visibility = View.VISIBLE
+                binding.btnGoogle.visibility = View.VISIBLE
                 binding.buttonContainer.visibility = View.GONE
                 binding.tvOr.visibility = View.VISIBLE
             }
