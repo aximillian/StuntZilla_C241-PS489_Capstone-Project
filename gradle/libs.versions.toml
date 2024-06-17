@@ -31,6 +31,16 @@ shimmer = "0.5.0"
 playServicesMaps = "18.2.0"
 googleKsp = "1.9.21-1.0.15"
 activityVersion = "1.9.0"
+annotation = "1.8.0"
+lifecycleLivedataKtx = "2.8.2"
+lifecycleViewmodelKtx = "2.8.2"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.0.0"
+cardView = "1.0.0"
+simpleGauge = "0.3.1"
+playServicesAuth = "21.1.1"
+credentials = "1.2.2"
+googleid = "1.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -69,9 +79,20 @@ retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref =
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activityVersion" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardView" }
+simple-gauge-android = { group = "com.github.Gruzer", name = "simple-gauge-android", version.ref = "simpleGauge" }
+androidx-credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
+androidx-credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentials" }
+googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "googleKsp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

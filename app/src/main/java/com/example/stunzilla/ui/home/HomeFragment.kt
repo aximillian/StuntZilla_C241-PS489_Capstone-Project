@@ -1,15 +1,27 @@
 package com.example.stunzilla.ui.home
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.credentials.ClearCredentialStateRequest
+import androidx.credentials.CredentialManager
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import com.ekn.gruzer.gaugelibrary.ArcGauge
+import com.ekn.gruzer.gaugelibrary.Range
+import com.ekn.gruzer.gaugelibrary.contract.ValueFormatter
+import com.example.stunzilla.MainActivity
 import com.example.stunzilla.databinding.FragmentHomeBinding
 import com.example.stunzilla.ui.auth.login.LoginActivity
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -17,6 +29,8 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var arcGauge: ArcGauge
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,14 +43,27 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+//        val textView: TextView = binding.textHome
+//        homeViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+//
+//        binding.btnLogin.setOnClickListener {
+//            val intent = Intent(requireContext(), LoginActivity::class.java)
+//            startActivity(intent)
+//        }
+//        dashboardGauge()
+        auth = Firebase.auth
+        val firebaseUser = auth.currentUser
+        if (firebaseUser == null) {
+            // Not signed in, launch the Login activity
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
         }
 
-        binding.btnLogin.setOnClickListener {
-            val intent = Intent(requireContext(), LoginActivity::class.java)
-            startActivity(intent)
+        binding.btnLogout.setOnClickListener {
+            signOut()
         }
 
         return root
@@ -45,5 +72,36 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    //    private fun dashboardGauge() {
+//        val range = Range()
+//        range.color = Color.parseColor("#FF8F1F")
+//        range.from = 0.0
+//        range.to = 100.0
+//
+//        arcGauge.minValue= 10.0
+//        arcGauge.maxValue = 150.0
+//        arcGauge.value = 35.0
+//
+//        arcGauge.addRange(range)
+//        arcGauge.isUseRangeBGColor= true
+//        arcGauge.valueColor = Color.BLUE
+//
+//        arcGauge.setFormatter(ValueFormatter {
+//            it.toInt().toString()
+//        })
+//    }
+    private fun signOut() {
+
+        lifecycleScope.launch {
+
+            val credentialManager = CredentialManager.create(requireContext())
+            auth.signOut()
+            credentialManager.clearCredentialState(ClearCredentialStateRequest())
+            startActivity(Intent(activity, LoginActivity::class.java))
+            activity?.finish()
+        }
+
     }
 }
