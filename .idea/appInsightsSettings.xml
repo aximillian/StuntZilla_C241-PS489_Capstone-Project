@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.stunzilla" />
-                  <option name="mobileSdkAppId" value="1:328097728203:android:204fa1fa9be13b2d087d4e" />
-                  <option name="projectId" value="stunzilla-c5998" />
-                  <option name="projectNumber" value="328097728203" />
+                  <option name="appId" value="com.test.stunzilla" />
+                  <option name="mobileSdkAppId" value="1:757273445589:android:0b126a79649e0863fc0e5c" />
+                  <option name="projectId" value="test-stuntzilla" />
+                  <option name="projectNumber" value="757273445589" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

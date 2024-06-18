@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.stunzilla"
+    namespace = "com.test.stunzilla"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.stunzilla"
+        applicationId = "com.test.stunzilla"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
