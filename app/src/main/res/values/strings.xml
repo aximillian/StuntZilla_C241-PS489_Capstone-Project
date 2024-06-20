@@ -16,10 +16,10 @@
     <string name="first_boarding_headline">Pantau Tumbuh Kembang Anak dengan Mudah dan Cepat</string>
     <string name="first_boarding_description">Dapatkan informasi lengkap tentang status gizi anak,\n ikuti perkembangannya dengan grafik pertumbuhan,\n dan akses tips pencegahan stunting</string>
 
-    <string name="second_boarding_headline">Lawan Stunting dengan Solusi Tepat</string>
+    <string name="second_boarding_headline">Lawan Stunting dengan\n Solusi Tepat</string>
     <string name="second_boarding_description">StunZilla membantu Anda memantau tumbuh \n kembang anak secara berkala, serta memberikan \n rekomendasi intervensi yang tepat\n untuk kesehatan anak.</string>
 
-    <string name="third_boarding_headline">Masa Depan Generasi Bebas Stunting Dimulai dari Pemantauan</string>
+    <string name="third_boarding_headline">Masa Depan Generasi Bebas Stunting Dimulai dari Sekarang</string>
     <string name="third_boarding_description">Bergabunglah dengan komunitas StunZilla untuk saling mendukung dalam memerangi stunting dan ciptakan generasi penerus yang lebih sehat dan kuat.</string>
 
     <!--Login-->
@@ -42,23 +42,23 @@
 
     <!--Home Fragment-->
     <string name="tv_welcome">Selamat Pagi, Jarwo</string>
-    <string name="iv_notification">Notification</string>
-    <string name="tv_dashboard">Kebutuhan Si Kecil hari ini</string>
-    <string name="tv_calories">Kalori</string>
+    <string name="iv_add">add</string>
+    <string name="tv_dashboard">Riwayat Pemeriksaan</string>
+    <string name="tv_action">Ada yang harus kamu lakuin nih</string>
+    <string name="tv_add_analyze">Lakukan Pemeriksaan</string>
 
     <!--Hint-->
-    <string name="hint_input_nickname">nama panggilan</string>
-    <string name="hint_input_full_name">nama lengkap</string>
-    <string name="hint_input_email">email</string>
+    <string name="hint_input_nickname">Masukkan nama panggilan</string>
+    <string name="hint_input_full_name">Masukkan nama lengkap</string>
+    <string name="hint_input_email">Masukkan email</string>
     <string name="hint_input_email_login">email or username</string>
     <string name="hint_input_usia_anak">hh/bb/tt</string>
-    <string name="hint_password">password</string>
+    <string name="hint_password">Masukkan password</string>
     <string name="hint_input_password">Masukkan password</string>
     <string name="hint_input_confirm_password">Masukkan konfirmasi password</string>
 
-    <!--Setting-->
-    <string name="bahasa_english">Bahasa Inggris</string>
-    <string name="bahasa_indonesia">Bahasa Indonesia</string>
+
+
 
     <!--Error Handling-->
     <string name="error_email">Email harus menggunakan format yang valid (@)</string>
@@ -82,4 +82,46 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <!--Setting-->
+    <string name="bahasa">Bahasa</string>
+    <string name="logout">Keluar</string>
+    <string name="history_menu">History</string>
+    <string name="profile">Profile</string>
+    <string name="analyze_stunting">Analyze Stunting</string>
+    <string name="empty">Riwayat tidak tersedia</string>
+    <string name="iv_stunting_history">Stunting_History</string>
+    <string name="language_icon">Ic_Bahasa</string>
+    <string name="log_out_icon">Ic_Keluar</string>
+    <string name="news_image">Ic_Gambar_Artikel</string>
+
+    <string name="related_articles">Related Articles</string>
+    <string name="article_title">Article Title</string>
+    <string name="article_description">article_description</string>
+    <string name="arrow_forward_icon">Arrow forward icon</string>
+
+    <!--Inputan-->
+    <string name="gender">Gender</string>
+    <string-array name="gender_options">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string name="umur">Umur</string>
+    <string name="umur_hint">Masukkan Umur Anda</string>
+
+    <string name="berat_badan">Berat Badan (kg)</string>
+    <string name="berat_badan_hint">Masukkan Berat Badan Anda</string>
+
+    <string name="berat_badan_lahir">Berat Badan Saat Lahir (kg)</string>
+    <string name="berat_badan_lahir_hint">Masukkan Berat Badan Saat Lahir Anda</string>
+
+    <string name="panjang_badan_lahir">Panjang Badan Saat Lahir (cm)</string>
+    <string name="panjang_badan_lahir_hint">Masukkan Panjang Badan Saat Lahir Anda</string>
+
+    <string name="berat_badan_saat_ini">Berat Badan Saat Ini (kg)</string>
+    <string name="berat_badan_saat_ini_hint">Masukkan Berat Badan Saat Ini Anda</string>
+
+    <string name="tinggi_badan_saat_ini">Tinggi Badan Saat Ini (cm)</string>
+    <string name="tinggi_badan_saat_ini_hint">Masukkan Tinggi Badan Saat Ini Anda</string>
 </resources>

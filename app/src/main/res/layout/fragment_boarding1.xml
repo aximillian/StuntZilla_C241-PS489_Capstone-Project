@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/transparent"
     android:orientation="vertical"
-    tools:context=".ui.splash.Boarding_1_Fragment">
+    tools:context=".ui.boarding.Boarding1Fragment">
 
     <android.widget.ImageView
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_skip"
         style="@style/TextMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,6 +39,7 @@
         android:layout_height="300dp"
         android:layout_marginTop="85dp"
         android:contentDescription="@string/onboarding_illustration"
+        android:src="@drawable/content_boarding"
         app:layout_constraintBottom_toTopOf="@+id/onboarding_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

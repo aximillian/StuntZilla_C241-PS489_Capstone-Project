@@ -4,15 +4,21 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class PreferenceManager(context: Context) {
-    private var prefs: SharedPreferences =
-        context.getSharedPreferences(ConstVal.PREFS_NAME, Context.MODE_PRIVATE)
-    private val editor = prefs.edit()
+    private val prefs: SharedPreferences = context.getSharedPreferences(ConstVal.PREFS_NAME, Context.MODE_PRIVATE)
 
-    val getToken = prefs.getString(ConstVal.KEY_TOKEN, "")
-    val getOnBoardingScreen = prefs.getBoolean(ConstVal.KEY_ONBOARDING_SCREEN, false)
+    fun isOnboardingCompleted(): Boolean {
+        return prefs.getBoolean(ConstVal.KEY_ONBOARDING_SCREEN, false)
+    }
 
-    fun setOnboardingScreenPreference() {
-        editor.putBoolean(ConstVal.KEY_ONBOARDING_SCREEN, true)
-        editor.apply()
+    fun setOnboardingCompleted(completed: Boolean) {
+        prefs.edit().putBoolean(ConstVal.KEY_ONBOARDING_SCREEN, completed).apply()
+    }
+
+    fun getToken(): String? {
+        return prefs.getString(ConstVal.KEY_TOKEN, null)
+    }
+
+    fun setToken(token: String) {
+        prefs.edit().putString(ConstVal.KEY_TOKEN, token).apply()
     }
 }

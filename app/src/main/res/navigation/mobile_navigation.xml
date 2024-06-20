@@ -3,65 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashFragment">
+
     <fragment
-        android:id="@+id/boardingFragment"
-        android:name="com.test.stunzilla.ui.splash.Boarding_1_Fragment"
-        android:label="fragment_boarding3"
-        tools:layout="@layout/fragment_boarding3" >
+        android:id="@+id/splashFragment"
+        android:name="com.test.stunzilla.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_boardingFragment_to_boarding2Fragment"
-            app:destination="@id/boarding2Fragment" />
+            android:id="@+id/action_splashFragment_to_boarding1Fragment"
+            app:destination="@id/boarding1Fragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
+
     <fragment
-        android:id="@+id/boarding3Fragment"
-        android:name="com.test.stunzilla.ui.splash.Boarding_3_Fragment"
-        android:label="boarding3Fragment" />
+        android:id="@+id/boarding1Fragment"
+        android:name="com.test.stunzilla.ui.boading.Boarding1Fragment"
+        android:label="fragment_boarding1"
+        tools:layout="@layout/fragment_boarding1" >
+        <action
+            android:id="@+id/action_boarding1Fragment_to_boarding2Fragment"
+            app:destination="@id/boarding2Fragment" />
+        <action
+            android:id="@+id/action_boarding1Fragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+    </fragment>
+
     <fragment
         android:id="@+id/boarding2Fragment"
-        android:name="com.test.stunzilla.ui.splash.Boarding_2_Fragment"
-        android:label="boarding2Fragment" >
+        android:name="com.test.stunzilla.ui.boading.Boarding2Fragment"
+        android:label="Boarding2Fragment" >
         <action
             android:id="@+id/action_boarding2Fragment_to_boarding3Fragment"
             app:destination="@id/boarding3Fragment" />
+        <action
+            android:id="@+id/action_boarding2Fragment_to_boarding1Fragment"
+            app:destination="@id/boarding1Fragment" />
+        <action
+            android:id="@+id/action_boarding2Fragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
+
+    <fragment
+        android:id="@+id/boarding3Fragment"
+        android:name="com.test.stunzilla.ui.boading.Boarding3Fragment"
+        android:label="Boarding3Fragment" >
+        <action
+            android:id="@+id/action_boarding3Fragment_to_boarding2Fragment"
+            app:destination="@id/boarding2Fragment" />
+        <action
+            android:id="@+id/action_boarding3Fragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+    </fragment>
+
     <activity
         android:id="@+id/loginActivity"
         android:name="com.test.stunzilla.ui.auth.login.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
+
     <activity
         android:id="@+id/registerActivity"
         android:name="com.test.stunzilla.ui.auth.register.RegisterActivity"
         android:label="activity_register"
         tools:layout="@layout/activity_register" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.test.stunzilla.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/notificationsFragment"
-        android:name="com.test.stunzilla.ui.notifications.NotificationsFragment"
-        android:label="fragment_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/dashboardFragment"
-        android:name="com.test.stunzilla.ui.dashboard.DashboardFragment"
-        android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.test.stunzilla.ui.splash.SplashFragment"
-        android:label="SplashFragment" >
-        <action
-            android:id="@+id/action_splashFragment_to_boardingFragment"
-            app:destination="@id/boardingFragment" />
-        <action
-            android:id="@+id/action_splashFragment_to_loginActivity"
-            app:destination="@id/loginActivity" />
-        <action
-            android:id="@+id/action_splashFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
 </navigation>

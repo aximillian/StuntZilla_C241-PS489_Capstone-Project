@@ -32,19 +32,18 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
     }
 
     override fun initAction() {
+        lifecycleScope.launch {
+            delay(ConstVal.SPLASH_SCREEN_DURATION.seconds)
+            if (preferenceManager.isOnboardingCompleted()) {
+                findNavController().navigate(R.id.action_splashFragment_to_loginActivity)
+            } else {
+                findNavController().navigate(R.id.action_splashFragment_to_boarding1Fragment)
+            }
+
+        }
     }
 
     override fun initProcess() {
-        lifecycleScope.launch {
-            delay(ConstVal.SPLASH_SCREEN_DURATION.seconds)
-            if (preferenceManager.getToken != "") {
-                findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
-            } else if (preferenceManager.getOnBoardingScreen) {
-                findNavController().navigate(R.id.action_splashFragment_to_loginActivity)
-            } else {
-                findNavController().navigate(R.id.action_splashFragment_to_boardingFragment)
-            }
-        }
     }
 
 

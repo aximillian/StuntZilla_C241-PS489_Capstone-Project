@@ -1,10 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.ksp)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-parcelize")
-    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -68,10 +68,14 @@ dependencies {
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.core)
     implementation(libs.koin.android)
+
+
     implementation(libs.androidx.activity)
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Firebase
     implementation(libs.firebase.auth)
     implementation(libs.play.services.auth)
     implementation(libs.androidx.credentials)
@@ -89,6 +93,7 @@ dependencies {
 
     // Coil
     implementation(libs.coil)
+    implementation (libs.lottie)
 
     // Fancy Toast
     implementation(libs.fancyToast)
@@ -96,7 +101,6 @@ dependencies {
     // Room Database
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.paging)
 
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

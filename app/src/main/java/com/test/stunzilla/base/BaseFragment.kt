@@ -5,7 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.whenStateAtLeast
 import androidx.viewbinding.ViewBinding
+import kotlinx.coroutines.launch
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     private var _binding: VB? = null
@@ -50,4 +54,12 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     abstract fun initProcess()
 
     abstract fun initObservers()
+
+    protected fun runOnLifecycle(state: Lifecycle.State, block: suspend () -> Unit) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.lifecycle.whenStateAtLeast(state) {
+                block()
+            }
+        }
+    }
 }
